@@ -1,0 +1,93 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Goodreads",
+	"behavior": "create",
+	"noteContentFormat": "> [!info] tldr\n> - {{\"a 250 character summary of what the book is about in plain english and in lowercase\"}}\n\n![]({{image}})\n\n## notes \n\n",
+	"properties": [
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "created datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "updated datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "books, read, to-read",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{selector:.BookPageTitleSection__title h1}}",
+			"type": "text"
+		},
+		{
+			"name": "author",
+			"value": "[[{{schema:@Book:author[0].name}}]]",
+			"type": "multitext"
+		},
+		{
+			"name": "genre",
+			"value": "{{selector:.BookPageMetadataSection__genres .BookPageMetadataSection__genreButton|wikilink|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "summary",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "pages",
+			"value": "{{selector:p[data-testid='pagesFormat']|split:\\\", \\\"|slice:0|split:\\\" \\\"|slice:0}}",
+			"type": "number"
+		},
+		{
+			"name": "categories",
+			"value": "[[books.base]]",
+			"type": "multitext"
+		},
+		{
+			"name": "published",
+			"value": "{{\\\"date object of when the book was published\\\"}}",
+			"type": "date"
+		},
+		{
+			"name": "cover",
+			"value": "{{selector:.BookCover__image img?src|first}}",
+			"type": "text"
+		},
+		{
+			"name": "goodreads rating",
+			"value": "{{selector:.RatingStatistics__rating|first|round:2}}",
+			"type": "text"
+		},
+		{
+			"name": "my_rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "bookshelves",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "last read",
+			"value": "",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://www.goodreads.com/"
+	],
+	"noteNameFormat": "{{schema:@Book:name}}",
+	"path": "05-media/books"
+}

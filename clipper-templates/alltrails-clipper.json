@@ -1,0 +1,124 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "AllTrails",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n---\n![1000]({{meta:name:twitter:image}})\n\n## Description\n---\n{{selector:.Description_description__d8JyX}}\n\n\n> [!NOTE]  ## Notes\n> Contents\n",
+	"properties": [
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "created datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "updated datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "[\\\"hiking\\\", \\\"trail\\\", \\\"to-hike\\\", \\\"hiked\\\"]",
+			"type": "multitext"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "trail name",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "length (km)",
+			"value": "{{selector:.styles_statValue__wFfwz|nth:1|first|replace:\\\"km\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "elevation gain (m)",
+			"value": "{{selector:.styles_statValue__wFfwz|nth:2|first|replace:\\\"m\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "estimated time",
+			"value": "{{selector:.styles_statValue__wFfwz|nth:3|first|replace:\\\"m\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "route type",
+			"value": "{{selector:.styles_statLabel__WhQ9V|last}}",
+			"type": "text"
+		},
+		{
+			"name": "route map",
+			"value": "{{selector:img[alt$=\\\"map\\\"]?src|first}}",
+			"type": "text"
+		},
+		{
+			"name": "route map overview",
+			"value": "{{meta:name:twitter:image}}",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{selector:.Description_description__d8JyX}}",
+			"type": "text"
+		},
+		{
+			"name": "review count",
+			"value": "{{selector:.Rating_ratingAndReviews__Qnq1x button|first|replace:\\\"(\\\":\\\"\\\"|replace:\\\")\\\":\\\"\\\"|replace:\\\" reviews\\\":\\\"\\\"|replace:\\\",\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "difficulty",
+			"value": "{{selector:.TrailLayout_alerts__wzKO2 button|last}}",
+			"type": "text"
+		},
+		{
+			"name": "area",
+			"value": "{{selector:.HeaderMetadata_locationLinkText__lx1Pf}}",
+			"type": "text"
+		},
+		{
+			"name": "latitude",
+			"value": "{{meta:name:place:location:latitude}}",
+			"type": "number"
+		},
+		{
+			"name": "longitude",
+			"value": "{{meta:name:place:location:longitude}}",
+			"type": "number"
+		},
+		{
+			"name": "rating",
+			"value": "{{selector:.Rating_ratingLink__wPEYB span|first}}",
+			"type": "number"
+		},
+		{
+			"name": "my rating",
+			"value": "",
+			"type": "number"
+		},
+		{
+			"name": "last hiked",
+			"value": "",
+			"type": "date"
+		},
+		{
+			"name": "past hike dates",
+			"value": "",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"alltrails.com/trail/"
+	],
+	"noteNameFormat": "{{title|safe_name}}",
+	"path": "05-media/trail-maps",
+	"context": "{{selectorHtml:.styles-module__trailDetails___XNQUD, .trail-details, main|markdown|trim}}"
+}
