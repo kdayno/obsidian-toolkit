@@ -1,0 +1,63 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "YouTube (with transcript)",
+	"behavior": "create",
+	"noteContentFormat": "> [!info] tldw\n> {{\"write a <350 character summary of what the video is about and key insights covered in lowercase\"}}\n\n```table-of-contents\n```\n\n##  Notes\n- .\n\n## Video\n\n{{content}}",
+	"properties": [
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "created datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "updated datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "youtube, videos",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "creator",
+			"value": "[[{{schema:@VideoObject:author}}]]",
+			"type": "multitext"
+		},
+		{
+			"name": "summary",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "uploaded",
+			"value": "{{schema:@VideoObject:uploadDate}}",
+			"type": "date"
+		},
+		{
+			"name": "categories",
+			"value": "[[videos.base]]",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://www.youtube.com"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "03-information-library/videos"
+}
