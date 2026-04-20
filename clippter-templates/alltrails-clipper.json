@@ -1,0 +1,54 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "AllTrails",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n\n## Trail Info\n{{content}}\n\n## Notes\n\n\n## Rating\n\n",
+	"properties": [
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "trail-name",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "clipped",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "[\\\"hiking\\\", \\\"trail\\\"]",
+			"type": "multitext"
+		},
+		{
+			"name": "length",
+			"value": "{{selector:.styles_statValue__wFfwz|nth:1|first|replace:\\\"km\\\":\\\"\\\"}}",
+			"type": "number"
+		},
+		{
+			"name": "elevation gain",
+			"value": "{{selector:.styles_statValue__wFfwz|nth:2|first|replace:\\\"m\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "estimated time",
+			"value": "{{selector:.styles_statValue__wFfwz|nth:3|first|replace:\\\"m\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "route type",
+			"value": "{{selector:.styles_statLabel__WhQ9V|last}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"alltrails.com/trail/"
+	],
+	"noteNameFormat": "{{title|safe_name}}",
+	"path": "Hiking/Trails",
+	"context": "{{selectorHtml:.styles-module__trailDetails___XNQUD, .trail-details, main|markdown|trim}}"
+}
