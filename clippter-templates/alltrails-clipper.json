@@ -5,6 +5,26 @@
 	"noteContentFormat": "# {{title}}\n\n## Trail Info\n{{content}}\n\n## Notes\n\n\n## Rating\n\n",
 	"properties": [
 		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "created datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "updated datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "[\\\"hiking\\\", \\\"trail\\\"]",
+			"type": "multitext"
+		},
+		{
 			"name": "source",
 			"value": "{{url}}",
 			"type": "text"
@@ -13,16 +33,6 @@
 			"name": "trail-name",
 			"value": "{{title}}",
 			"type": "text"
-		},
-		{
-			"name": "clipped",
-			"value": "{{date}}",
-			"type": "date"
-		},
-		{
-			"name": "tags",
-			"value": "[\\\"hiking\\\", \\\"trail\\\"]",
-			"type": "multitext"
 		},
 		{
 			"name": "length",
@@ -43,12 +53,17 @@
 			"name": "route type",
 			"value": "{{selector:.styles_statLabel__WhQ9V|last}}",
 			"type": "text"
+		},
+		{
+			"name": "route map",
+			"value": "{{selector:img[alt$=\\\"map\\\"]?src|first}}",
+			"type": "text"
 		}
 	],
 	"triggers": [
 		"alltrails.com/trail/"
 	],
 	"noteNameFormat": "{{title|safe_name}}",
-	"path": "Hiking/Trails",
+	"path": "References",
 	"context": "{{selectorHtml:.styles-module__trailDetails___XNQUD, .trail-details, main|markdown|trim}}"
 }
