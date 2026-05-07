@@ -55,13 +55,8 @@
 			"type": "text"
 		},
 		{
-			"name": "route map",
-			"value": "{{selector:img[alt$=\\\"map\\\"]?src|first}}",
-			"type": "text"
-		},
-		{
 			"name": "route map overview",
-			"value": "{{meta:name:twitter:image}}",
+			"value": "",
 			"type": "text"
 		},
 		{
@@ -111,6 +106,11 @@
 		},
 		{
 			"name": "past hike dates",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "strava links",
 			"value": "",
 			"type": "multitext"
 		}
