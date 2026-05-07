@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Articles",
 	"behavior": "create",
-	"noteContentFormat": "{{content}}",
+	"noteContentFormat": "> [!info] tldr\n> {{\"write a <350 character summary of what this article is about and key insights covered in lowercase\"}}\n\n\n{{content}}",
 	"properties": [
 		{
 			"name": "created",
@@ -50,7 +50,9 @@
 			"type": "text"
 		}
 	],
-	"triggers": [],
+	"triggers": [
+		"/^https:\\/\\/[^\\/]+\\.substack\\.com\\/.*/"
+	],
 	"noteNameFormat": "{{title}}",
 	"path": "03-information-library/articles"
 }
