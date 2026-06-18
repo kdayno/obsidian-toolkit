@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "IMDB (tv shows)",
 	"behavior": "create",
-	"noteContentFormat": "",
+	"noteContentFormat": "# Plot\n---\n{{schema:description}}\n\n> [!NOTE] # Notes\n> Contents",
 	"properties": [
 		{
 			"name": "created",
@@ -84,5 +84,5 @@
 		"/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+(?!\\/reference\\/)(\\/[^\\s]*)?$/"
 	],
 	"noteNameFormat": "{{schema:name}}",
-	"path": "05-media/tv-shows"
+	"path": "05-collections/movies+tv-shows"
 }

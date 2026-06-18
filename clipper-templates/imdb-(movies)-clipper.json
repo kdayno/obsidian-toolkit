@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "IMDB (movies)",
 	"behavior": "create",
-	"noteContentFormat": "",
+	"noteContentFormat": "# Plot\n---\n{{schema:description}}\n\n> [!NOTE] # Notes\n> Contents",
 	"properties": [
 		{
 			"name": "created",
@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "movies, review, watched, watching",
+			"value": "movies, review, watched",
 			"type": "multitext"
 		},
 		{
@@ -84,5 +84,5 @@
 		"/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+(?!\\/reference\\/)(\\/[^\\s]*)?$/"
 	],
 	"noteNameFormat": "{{schema:name}}",
-	"path": "05-media/movies"
+	"path": "05-collections/movies+tv-shows"
 }

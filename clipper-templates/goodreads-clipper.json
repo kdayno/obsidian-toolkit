@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Goodreads",
 	"behavior": "create",
-	"noteContentFormat": "> [!info] tldr\n> - {{\"a 250 character summary of what the book is about in plain english and in lowercase\"}}\n\n![]({{image}})\n\n## notes \n\n",
+	"noteContentFormat": "> [!info] ## tldr\n> - {{\"a 250 character summary of what the book is about in plain english and in lowercase\"}}\n\n![]({{image}})\n\n## notes \n\n",
 	"properties": [
 		{
 			"name": "created",
@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "books, read, to-read",
+			"value": "books, to-read",
 			"type": "multitext"
 		},
 		{
@@ -51,7 +51,7 @@
 		},
 		{
 			"name": "categories",
-			"value": "[[books.base]]",
+			"value": "[[Books]]",
 			"type": "multitext"
 		},
 		{
@@ -65,12 +65,17 @@
 			"type": "text"
 		},
 		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
 			"name": "goodreads rating",
 			"value": "{{selector:.RatingStatistics__rating|first|round:2}}",
 			"type": "text"
 		},
 		{
-			"name": "my_rating",
+			"name": "my rating",
 			"value": "",
 			"type": "number"
 		},
@@ -89,5 +94,5 @@
 		"https://www.goodreads.com/"
 	],
 	"noteNameFormat": "{{schema:@Book:name}}",
-	"path": "05-media/books"
+	"path": "05-collections/books"
 }
