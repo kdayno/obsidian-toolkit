@@ -25,7 +25,7 @@
 			"type": "multitext"
 		},
 		{
-			"name": "source",
+			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
 		},
@@ -116,9 +116,9 @@
 		}
 	],
 	"triggers": [
-		"alltrails.com/trail/"
+		"/^https:\\/\\/www\\.alltrails\\.com\\/trail\\/.+/"
 	],
 	"noteNameFormat": "{{title|safe_name}}",
-	"path": "05-media/trail-maps",
+	"path": "05-collections/trail-maps",
 	"context": "{{selectorHtml:.styles-module__trailDetails___XNQUD, .trail-details, main|markdown|trim}}"
 }

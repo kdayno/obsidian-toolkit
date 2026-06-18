@@ -1,0 +1,88 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Google Maps",
+	"behavior": "create",
+	"noteContentFormat": "> [!NOTE] # Notes\n> ",
+	"properties": [
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "created datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "updated datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "to-visit, visited, places",
+			"type": "multitext"
+		},
+		{
+			"name": "place name",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "place type",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "place tags",
+			"value": "Dine-In, Takeout",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "categories",
+			"value": "[[Places]]",
+			"type": "multitext"
+		},
+		{
+			"name": "coordinates",
+			"value": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
+			"type": "multitext"
+		},
+		{
+			"name": "address",
+			"value": "{{selector:button[aria-label^=\\\"Address:\\\"]:aria-label|split:\\\"Address: \\\"|slice:1}}",
+			"type": "text"
+		},
+		{
+			"name": "google rating",
+			"value": "{{selector:div[jsaction*=\\\"moreReviews\\\"] .fontDisplayLarge}}",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{selector:div[aria-label^=\\\"About \\\"] button .PYvSYb[jslog]}}",
+			"type": "text"
+		},
+		{
+			"name": "last visited",
+			"value": "",
+			"type": "checkbox"
+		},
+		{
+			"name": "my rating",
+			"value": "",
+			"type": "number"
+		}
+	],
+	"triggers": [
+		"https://www.google.com/maps/place/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "05-collections/places"
+}

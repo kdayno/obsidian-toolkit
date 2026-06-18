@@ -30,7 +30,7 @@
 			"type": "text"
 		},
 		{
-			"name": "source",
+			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
 		},

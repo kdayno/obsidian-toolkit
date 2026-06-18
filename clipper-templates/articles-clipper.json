@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Articles",
 	"behavior": "create",
-	"noteContentFormat": "> [!info] tldr\n> {{\"write a <350 character summary of what this article is about and key insights covered in lowercase\"}}\n\n\n{{content}}",
+	"noteContentFormat": "> [!info] ## tldr\n> {{\"write a <350 character summary of what this article is about and key insights covered in lowercase\"}}\n\n```table-of-contents\n```\n\n{{content}}",
 	"properties": [
 		{
 			"name": "created",
@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "articles",
+			"value": "articles, read",
 			"type": "multitext"
 		},
 		{
@@ -30,7 +30,7 @@
 			"type": "text"
 		},
 		{
-			"name": "source",
+			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
 		},

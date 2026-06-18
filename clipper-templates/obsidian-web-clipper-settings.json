@@ -1,0 +1,1763 @@
+{
+  "general_settings": {
+    "betaFeatures": false,
+    "legacyMode": false,
+    "openBehavior": "embedded",
+    "saveBehavior": "addToObsidian",
+    "showMoreActionsButton": false,
+    "silentOpen": false
+  },
+  "highlighter_settings": {
+    "alwaysShowHighlights": true,
+    "highlightBehavior": "highlight-inline",
+    "highlighterEnabled": true
+  },
+  "interpreter_settings": {
+    "defaultPromptContext": "",
+    "interpreterAutoRun": false,
+    "interpreterEnabled": true,
+    "interpreterModel": "1776205350865",
+    "models": [
+      {
+        "enabled": true,
+        "id": "1776205350865",
+        "name": "GPT-4o Mini",
+        "providerId": "1776205296733",
+        "providerModelId": "gpt-4o-mini"
+      }
+    ],
+    "providers": [
+      {
+        "apiKey": "",
+        "apiKeyRequired": true,
+        "baseUrl": "https://api.openai.com/v1/chat/completions",
+        "id": "",
+        "name": "OpenAI"
+      }
+    ]
+  },
+  "migrationVersion": 1,
+  "property_types": [
+    {
+      "name": "title",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{url}}",
+      "name": "source",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{author|split:\", \"|wikilink|join}}",
+      "name": "author",
+      "type": "multitext"
+    },
+    {
+      "name": "published",
+      "type": "date"
+    },
+    {
+      "name": "created",
+      "type": "date"
+    },
+    {
+      "name": "description",
+      "type": "text"
+    },
+    {
+      "name": "tags",
+      "type": "multitext"
+    },
+    {
+      "name": "last read",
+      "type": "date"
+    },
+    {
+      "name": "summary",
+      "type": "multitext"
+    },
+    {
+      "name": "rating",
+      "type": "number"
+    },
+    {
+      "name": "categories",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "want to read",
+      "name": "status",
+      "type": "text"
+    },
+    {
+      "name": "creator",
+      "type": "multitext"
+    },
+    {
+      "name": "uploaded",
+      "type": "date"
+    },
+    {
+      "name": "feature",
+      "type": "text"
+    },
+    {
+      "name": "url",
+      "type": "text"
+    },
+    {
+      "name": "shelf",
+      "type": "multitext"
+    },
+    {
+      "name": "bookshelves",
+      "type": "multitext"
+    },
+    {
+      "name": "created date",
+      "type": "date"
+    },
+    {
+      "name": "created datetime",
+      "type": "datetime"
+    },
+    {
+      "name": "updated datetime",
+      "type": "datetime"
+    },
+    {
+      "name": "genre",
+      "type": "multitext"
+    },
+    {
+      "name": "pages",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{selector:p[data-testid='publicationInfo']|split:\" \"|last}}",
+      "name": "year",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{selector:.RatingStatistics__rating|first|round:2}}",
+      "name": "scoreGr",
+      "type": "number"
+    },
+    {
+      "name": "cover",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{selector:.DescList|split:\\\"ISBN\\\"|slice:1,2|split:\\\" \\\"|first}}",
+      "name": "isbn",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{selector:.DescList|split:\\\"Language\\\"|last}}",
+      "name": "language",
+      "type": "text"
+    },
+    {
+      "name": "rating_avg",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{selector:.RatingStatistics__rating|first|round:2}}",
+      "name": "goodreads_rating_avg",
+      "type": "number"
+    },
+    {
+      "name": "my_rating",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{selector:p[data-testid='publicationInfo']|split:\\\" \\\"|last}}",
+      "name": "published year",
+      "type": "date"
+    },
+    {
+      "name": "average rating",
+      "type": "text"
+    },
+    {
+      "name": "my rating",
+      "type": "number"
+    },
+    {
+      "name": "imdbId",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{description|split:\\\"Directed by \\\"|slice:1|split:\\\". With\\\"|first|split:\\\", \\\"|wikilink|join}}",
+      "name": "director",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{selector:.ipc-inline-list a[href*='name']|unique|wikilink|join}}",
+      "name": "cast",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{selector:#runtime .ipc-metadata-list-item__list-content-item--subText|first}}",
+      "name": "runtime",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{selector:.ipc-rating-star--rating|first|round:1}}",
+      "name": "scoreImdb",
+      "type": "number"
+    },
+    {
+      "name": "last",
+      "type": "date"
+    },
+    {
+      "defaultValue": "{{schema:description}}",
+      "name": "plot",
+      "type": "text"
+    },
+    {
+      "name": "release year",
+      "type": "text"
+    },
+    {
+      "name": "media-lists",
+      "type": "multitext"
+    },
+    {
+      "name": "last watched",
+      "type": "text"
+    },
+    {
+      "name": "goodreads rating",
+      "type": "text"
+    },
+    {
+      "name": "trail-name",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{date}}",
+      "name": "clipped",
+      "type": "date"
+    },
+    {
+      "name": "type",
+      "type": "multitext"
+    },
+    {
+      "name": "loc",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
+      "name": "coordinates",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{selector:button[aria-label^=\\\"Address:\\\"]:aria-label|split:\\\"Address: \\\"|slice:1}}",
+      "name": "address",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{selector:div[jsaction*=\\\"moreReviews\\\"] .fontDisplayLarge}}",
+      "name": "scoreGoogle",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{selectorText:a.HeaderMetadata_locationLinkText__lx1Pf}}",
+      "name": "park",
+      "type": "text"
+    },
+    {
+      "name": "difficulty",
+      "type": "text"
+    },
+    {
+      "name": "length",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{selectorText:.styles_statRow__eQyhk:nth-child(2) .styles_statValue__wFfwz}}",
+      "name": "elevation-gain",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{selectorText:[data-testid=\"loop\"]|trim}}|{{selectorText:[data-testid=\"out-and-back\"]|trim}}|{{selectorText:[data-testid=\"point-to-point\"]|trim}}",
+      "name": "route-type",
+      "type": "text"
+    },
+    {
+      "name": "date-hiked",
+      "type": "date"
+    },
+    {
+      "name": "my-rating",
+      "type": "number"
+    },
+    {
+      "name": "elevation gain",
+      "type": "number"
+    },
+    {
+      "name": "route type",
+      "type": "text"
+    },
+    {
+      "name": "length2",
+      "type": "text"
+    },
+    {
+      "name": "elevation gain 2",
+      "type": "text"
+    },
+    {
+      "name": "route type 2",
+      "type": "text"
+    },
+    {
+      "name": "route type 3",
+      "type": "text"
+    },
+    {
+      "name": "longitude",
+      "type": "number"
+    },
+    {
+      "name": "latitude",
+      "type": "number"
+    },
+    {
+      "name": "estimated time",
+      "type": "text"
+    },
+    {
+      "name": "route map",
+      "type": "text"
+    },
+    {
+      "name": "review count",
+      "type": "text"
+    },
+    {
+      "name": "route map overview",
+      "type": "text"
+    },
+    {
+      "name": "trail name",
+      "type": "text"
+    },
+    {
+      "name": "area",
+      "type": "text"
+    },
+    {
+      "name": "last hiked",
+      "type": "date"
+    },
+    {
+      "name": "length (km)",
+      "type": "text"
+    },
+    {
+      "name": "elevation gain (m)",
+      "type": "text"
+    },
+    {
+      "name": "past hike dates",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{meta:property:product:price:amount}}",
+      "name": "price",
+      "type": "number"
+    },
+    {
+      "defaultValue": "{{image}}",
+      "name": "image",
+      "type": "text"
+    },
+    {
+      "name": "brand",
+      "type": "multitext"
+    },
+    {
+      "name": "currency",
+      "type": "text"
+    },
+    {
+      "name": "size",
+      "type": "multitext"
+    },
+    {
+      "name": "colour",
+      "type": "multitext"
+    },
+    {
+      "name": "strava links",
+      "type": "multitext"
+    },
+    {
+      "name": "last visited",
+      "type": "date"
+    },
+    {
+      "name": "place type",
+      "type": "text"
+    },
+    {
+      "name": "place name",
+      "type": "text"
+    },
+    {
+      "name": "place icon",
+      "type": "text"
+    },
+    {
+      "name": "marker colour",
+      "type": "text"
+    },
+    {
+      "name": "google rating",
+      "type": "text"
+    },
+    {
+      "name": "place image",
+      "type": "text"
+    },
+    {
+      "name": "place tags",
+      "type": "multitext"
+    }
+  ],
+  "reader_settings": {
+    "appearance": "auto",
+    "autoScroll": true,
+    "blendImages": true,
+    "colorLinks": false,
+    "customCss": "",
+    "darkTheme": "same",
+    "defaultFont": "",
+    "followLinks": true,
+    "fontSize": 13,
+    "fonts": [],
+    "highlightActiveLine": true,
+    "lightTheme": "everforest",
+    "lineHeight": 1.6,
+    "maxWidth": 40,
+    "pinPlayer": true
+  },
+  "stats": {
+    "addToObsidian": 560,
+    "copyToClipboard": 0,
+    "saveFile": 0,
+    "share": 0
+  },
+  "template_1750094232403ofvg6hxpp": {
+    "id": "1750094232403ofvg6hxpp",
+    "name": "Default",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "04-information-library/inbox",
+    "noteContentFormat": "{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "17500942324030h7yr2sgd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1750094232403f3yv36x1c",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17500942324030i8ojprl4",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1750094232403q4mg3kz7p",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "17500942324036bk257ayv",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1750094232403ed6wdt760",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1750094232403i5vgqu9lm",
+        "name": "tags",
+        "value": "clippings",
+        "type": "multitext"
+      }
+    ],
+    "triggers": []
+  },
+  "template_177444609379975n8rcee8": {
+    "id": "177444609379975n8rcee8",
+    "name": "Podcasts-YouTube",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "03-information-library/podcasts",
+    "noteContentFormat": "> [!info] ## tldw\n> {{\"write a <350 character summary of what the video is about and key insights covered in lowercase\"}}\n\n##  Notes\n- .",
+    "context": "",
+    "properties": [
+      {
+        "id": "17500942324036bk257ayv",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776214941623muo43ctcs",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "17762149476957tkdl2r15",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1750094232403i5vgqu9lm",
+        "name": "tags",
+        "value": "youtube, podcasts, listened, watched",
+        "type": "multitext"
+      },
+      {
+        "id": "17500942324030h7yr2sgd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1750094232403f3yv36x1c",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17500942324030i8ojprl4",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1750094232403q4mg3kz7p",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1750094232403ed6wdt760",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      }
+    ],
+    "triggers": []
+  },
+  "template_17744461087450wmgkpw5b": {
+    "id": "17744461087450wmgkpw5b",
+    "name": "YouTube (with transcript)",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "03-information-library/videos",
+    "noteContentFormat": "> [!info] ## tldw\n> {{\"write a <350 character summary of what the video is about and key insights covered in lowercase\"}}\n\n```table-of-contents\n```\n\n##  Notes\n- .\n\n## Video\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1776213415629l006zjy2e",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776214854954ouehrw2px",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "17762148724585bz74xguw",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1750094232403i5vgqu9lm",
+        "name": "tags",
+        "value": "youtube, videos, watched",
+        "type": "multitext"
+      },
+      {
+        "id": "17500942324030h7yr2sgd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1750094232403f3yv36x1c",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17500942324030i8ojprl4",
+        "name": "creator",
+        "value": "[[{{schema:@VideoObject:author}}]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1776210119733fif0glopm",
+        "name": "summary",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "1776210023775v6682yx1w",
+        "name": "uploaded",
+        "value": "{{schema:@VideoObject:uploadDate}}",
+        "type": "date"
+      },
+      {
+        "id": "1750094232403q4mg3kz7p",
+        "name": "categories",
+        "value": "[[videos.base]]",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "https://www.youtube.com"
+    ]
+  },
+  "template_1774446127162a59n7qdhj": {
+    "id": "1774446127162a59n7qdhj",
+    "name": "Articles",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "03-information-library/articles",
+    "noteContentFormat": "> [!info] ## tldr\n> {{\"write a <350 character summary of what this article is about and key insights covered in lowercase\"}}\n\n```table-of-contents\n```\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "17500942324036bk257ayv",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776214917129l0sm3wq80",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776214919959cnubmub2e",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1750094232403i5vgqu9lm",
+        "name": "tags",
+        "value": "articles, read",
+        "type": "multitext"
+      },
+      {
+        "id": "17500942324030h7yr2sgd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1750094232403f3yv36x1c",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17500942324030i8ojprl4",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1750094232403q4mg3kz7p",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1750094232403ed6wdt760",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "/^https:\\/\\/[^\\/]+\\.substack\\.com\\/.*/"
+    ]
+  },
+  "template_1775171074129jsnlv2y1o": {
+    "id": "1775171074129jsnlv2y1o",
+    "name": "Webpages",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "03-information-library/webpages",
+    "noteContentFormat": "{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "17500942324036bk257ayv",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776214962004bme4q7z52",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776214965092l2k3iatjs",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1750094232403i5vgqu9lm",
+        "name": "tags",
+        "value": "webpages",
+        "type": "multitext"
+      },
+      {
+        "id": "17500942324030h7yr2sgd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1750094232403f3yv36x1c",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17500942324030i8ojprl4",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1750094232403q4mg3kz7p",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1750094232403ed6wdt760",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      }
+    ],
+    "triggers": []
+  },
+  "template_1776190378553niqzdev": {
+    "schemaVersion": "0.1.0",
+    "name": "YouTube",
+    "behavior": "create",
+    "noteContentFormat": "> [!info] ## tldw\n> {{\"write a <350 character summary of what the video is about and key insights covered in lowercase\"}}\n\n```table-of-contents\n```\n\n# Notes\n- .\n",
+    "properties": [
+      {
+        "id": "17762134265075o0qinwes",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776214890928p5s75ofle",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776214894435y5lycimvg",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "177619037855884wcedi",
+        "name": "tags",
+        "value": "youtube, videos, watched",
+        "type": "multitext"
+      },
+      {
+        "id": "1776210081569bomfqwvp2",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "17761903785584t9dzz0",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17761903785580uahe2c",
+        "name": "creator",
+        "value": "[[{{schema:@VideoObject:author}}]]",
+        "type": "multitext"
+      },
+      {
+        "id": "177619037855813fweeo",
+        "name": "summary",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "1776190378558m4g8nsz",
+        "name": "uploaded",
+        "value": "{{schema:@VideoObject:uploadDate}}",
+        "type": "date"
+      },
+      {
+        "id": "1776190378558r6unbvs",
+        "name": "categories",
+        "value": "[[videos.base]]",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "https://www.youtube.com"
+    ],
+    "noteNameFormat": "{{title}}",
+    "path": "03-information-library/videos",
+    "context": "",
+    "id": "1776190378553niqzdev"
+  },
+  "template_17762724654960lsbsumwr": {
+    "id": "17762724654960lsbsumwr",
+    "name": "Reddit",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "03-information-library/posts",
+    "noteContentFormat": "{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "17500942324036bk257ayv",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776214917129l0sm3wq80",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776214919959cnubmub2e",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1750094232403i5vgqu9lm",
+        "name": "tags",
+        "value": "posts, reddit",
+        "type": "multitext"
+      },
+      {
+        "id": "17500942324030h7yr2sgd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1750094232403f3yv36x1c",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17500942324030i8ojprl4",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1750094232403q4mg3kz7p",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1750094232403ed6wdt760",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "https://www.reddit.com/"
+    ]
+  },
+  "template_1776486272594pwbakuc": {
+    "schemaVersion": "0.1.0",
+    "name": "IMDB (movies)",
+    "behavior": "create",
+    "noteNameFormat": "{{schema:name}}",
+    "path": "05-collections/movies+tv-shows",
+    "noteContentFormat": "# Plot\n---\n{{schema:description}}\n\n> [!NOTE] # Notes\n> Contents",
+    "properties": [
+      {
+        "id": "1776486272597pecxmwl",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776487529295ij1vazzi0",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776487542256qjh9920vw",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776486272597szhdz1k",
+        "name": "tags",
+        "value": "movies, review, watched",
+        "type": "multitext"
+      },
+      {
+        "id": "1776486272597rbx7ve5",
+        "name": "categories",
+        "value": "[[Movies]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1776486272597ij7zsz8",
+        "name": "genre",
+        "value": "{{schema:genre|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1776486272597ck9f7rf",
+        "name": "release year",
+        "value": "{{schema:datePublished|split:\\\"-\\\"|slice:0,1}}",
+        "type": "text"
+      },
+      {
+        "id": "17764862725978nyx0yj",
+        "name": "plot",
+        "value": "{{schema:description}}",
+        "type": "text"
+      },
+      {
+        "id": "1776486272597b450l1v",
+        "name": "director",
+        "value": "{{selector:[data-testid=\\\"title-pc-principal-credit\\\"]:first-child a|unique|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1776486272597tw50o64",
+        "name": "scoreImdb",
+        "value": "{{schema:aggregateRating.ratingValue}}",
+        "type": "number"
+      },
+      {
+        "id": "1776486272597xacenfh",
+        "name": "cast",
+        "value": "{{selector:.ipc-inline-list a[href*='name']|unique|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "17764862725978k5hegj",
+        "name": "cover",
+        "value": "{{schema:image}}",
+        "type": "text"
+      },
+      {
+        "id": "1776487191493os9xst3rq",
+        "name": "imdbId",
+        "value": "{{meta:property:imdb:pageConst}}",
+        "type": "text"
+      },
+      {
+        "id": "1776489772623j4pfo3hrz",
+        "name": "last watched",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "id": "17764898104231f83wbzv3",
+        "name": "my rating",
+        "value": "",
+        "type": "number"
+      }
+    ],
+    "triggers": [
+      "/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+(?!\\/reference\\/)(\\/[^\\s]*)?$/"
+    ],
+    "id": "1776486272594pwbakuc",
+    "context": ""
+  },
+  "template_1776488399858dh38e7h5e": {
+    "schemaVersion": "0.1.0",
+    "name": "IMDB (tv shows)",
+    "behavior": "create",
+    "noteNameFormat": "{{schema:name}}",
+    "path": "05-collections/movies+tv-shows",
+    "noteContentFormat": "# Plot\n---\n{{schema:description}}\n\n> [!NOTE] # Notes\n> Contents",
+    "properties": [
+      {
+        "id": "1776486272597pecxmwl",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776487529295ij1vazzi0",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776487542256qjh9920vw",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776486272597szhdz1k",
+        "name": "tags",
+        "value": "tv-shows, review, watched, watching",
+        "type": "multitext"
+      },
+      {
+        "id": "1776486272597rbx7ve5",
+        "name": "categories",
+        "value": "[[TV Shows]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1776486272597ij7zsz8",
+        "name": "genre",
+        "value": "{{schema:genre|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1776486272597ck9f7rf",
+        "name": "release year",
+        "value": "{{schema:datePublished|split:\\\"-\\\"|slice:0,1}}",
+        "type": "text"
+      },
+      {
+        "id": "17764862725978nyx0yj",
+        "name": "plot",
+        "value": "{{schema:description}}",
+        "type": "text"
+      },
+      {
+        "id": "1776486272597b450l1v",
+        "name": "director",
+        "value": "{{selector:[data-testid=\\\"title-pc-principal-credit\\\"]:first-child a|unique|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1776486272597tw50o64",
+        "name": "scoreImdb",
+        "value": "{{schema:aggregateRating.ratingValue}}",
+        "type": "number"
+      },
+      {
+        "id": "1776486272597xacenfh",
+        "name": "cast",
+        "value": "{{selector:.ipc-inline-list a[href*='name']|unique|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "17764862725978k5hegj",
+        "name": "cover",
+        "value": "{{schema:image}}",
+        "type": "text"
+      },
+      {
+        "id": "1776487191493os9xst3rq",
+        "name": "imdbId",
+        "value": "{{meta:property:imdb:pageConst}}",
+        "type": "text"
+      },
+      {
+        "id": "1776489865788pr8rcnbmx",
+        "name": "last watched",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "id": "1776489848345vyl4safen",
+        "name": "my rating",
+        "value": "",
+        "type": "number"
+      }
+    ],
+    "triggers": [
+      "/^https:\\/\\/www\\.imdb\\.com\\/title\\/tt\\d+(?!\\/reference\\/)(\\/[^\\s]*)?$/"
+    ],
+    "id": "1776488399858dh38e7h5e",
+    "context": ""
+  },
+  "template_17765582996981bvo90i": {
+    "schemaVersion": "0.1.0",
+    "name": "Goodreads",
+    "behavior": "create",
+    "noteContentFormat": "> [!info] ## tldr\n> - {{\"a 250 character summary of what the book is about in plain english and in lowercase\"}}\n\n![]({{image}})\n\n## notes \n\n",
+    "properties": [
+      {
+        "id": "1776558299699mo5pxsy",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776558299699qlpzgap",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "17765582996992pwttrz",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "17765582996997zafd2l",
+        "name": "tags",
+        "value": "books, to-read",
+        "type": "multitext"
+      },
+      {
+        "id": "1776558299699bgzi7po",
+        "name": "title",
+        "value": "{{selector:.BookPageTitleSection__title h1}}",
+        "type": "text"
+      },
+      {
+        "id": "1776558299699c28eduy",
+        "name": "author",
+        "value": "[[{{schema:@Book:author[0].name}}]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1776558299699s23lxwb",
+        "name": "genre",
+        "value": "{{selector:.BookPageMetadataSection__genres .BookPageMetadataSection__genreButton|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1776558299699y6oz8nz",
+        "name": "summary",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "1776558299699g5t1d7l",
+        "name": "pages",
+        "value": "{{selector:p[data-testid='pagesFormat']|split:\\\", \\\"|slice:0|split:\\\" \\\"|slice:0}}",
+        "type": "number"
+      },
+      {
+        "id": "1776558299699ufunost",
+        "name": "categories",
+        "value": "[[Books]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1776558299699jp7gwql",
+        "name": "published",
+        "value": "{{\\\"date object of when the book was published\\\"}}",
+        "type": "date"
+      },
+      {
+        "id": "1776558549118t9v17y5r2",
+        "name": "cover",
+        "value": "{{selector:.BookCover__image img?src|first}}",
+        "type": "text"
+      },
+      {
+        "id": "1780204360389kw7kegini",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17765582996990xovx8c",
+        "name": "goodreads rating",
+        "value": "{{selector:.RatingStatistics__rating|first|round:2}}",
+        "type": "text"
+      },
+      {
+        "id": "17765582996994n40t3u",
+        "name": "my rating",
+        "value": "",
+        "type": "number"
+      },
+      {
+        "id": "1776558299699rc6npj9",
+        "name": "bookshelves",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "177655829969934z7tue",
+        "name": "last read",
+        "value": "",
+        "type": "date"
+      }
+    ],
+    "triggers": [
+      "https://www.goodreads.com/"
+    ],
+    "noteNameFormat": "{{schema:@Book:name}}",
+    "path": "05-collections/books",
+    "id": "17765582996981bvo90i",
+    "context": ""
+  },
+  "template_1776569505813e718quj": {
+    "schemaVersion": "0.1.0",
+    "name": "AllTrails",
+    "behavior": "create",
+    "noteNameFormat": "{{title|safe_name}}",
+    "path": "05-collections/trail-maps",
+    "context": "{{selectorHtml:.styles-module__trailDetails___XNQUD, .trail-details, main|markdown|trim}}",
+    "triggers": [
+      "/^https:\\/\\/www\\.alltrails\\.com\\/trail\\/.+/"
+    ],
+    "properties": [
+      {
+        "id": "1776569505814aj2e67q",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776572380762y5xtd3frb",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "17765723846407og70na5e",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776569505814umg51f8",
+        "name": "tags",
+        "value": "[\\\"hiking\\\", \\\"trail\\\", \\\"to-hike\\\", \\\"hiked\\\"]",
+        "type": "multitext"
+      },
+      {
+        "id": "1776569505814pe10vo4",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1776569505814gnnjzdf",
+        "name": "trail name",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1776571937714bf9029mjr",
+        "name": "length (km)",
+        "value": "{{selector:.styles_statValue__wFfwz|nth:1|first|replace:\\\"km\\\":\\\"\\\"}}",
+        "type": "text"
+      },
+      {
+        "id": "1776570664272cjkl1xts7",
+        "name": "elevation gain (m)",
+        "value": "{{selector:.styles_statValue__wFfwz|nth:2|first|replace:\\\"m\\\":\\\"\\\"}}",
+        "type": "text"
+      },
+      {
+        "id": "17765718589248af2xhg2k",
+        "name": "estimated time",
+        "value": "{{selector:.styles_statValue__wFfwz|nth:3|first|replace:\\\"m\\\":\\\"\\\"}}",
+        "type": "text"
+      },
+      {
+        "id": "17765703665546n59150pr",
+        "name": "route type",
+        "value": "{{selector:.styles_statLabel__WhQ9V|last}}",
+        "type": "text"
+      },
+      {
+        "id": "17765750859156jk3shmn8",
+        "name": "route map overview",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "id": "1776573961537to3k9y8lb",
+        "name": "description",
+        "value": "{{selector:.Description_description__d8JyX}}",
+        "type": "text"
+      },
+      {
+        "id": "17765746715888r7o427tj",
+        "name": "review count",
+        "value": "{{selector:.Rating_ratingAndReviews__Qnq1x button|first|replace:\\\"(\\\":\\\"\\\"|replace:\\\")\\\":\\\"\\\"|replace:\\\" reviews\\\":\\\"\\\"|replace:\\\",\\\":\\\"\\\"}}",
+        "type": "text"
+      },
+      {
+        "id": "17765748388834fctl4qs2",
+        "name": "difficulty",
+        "value": "{{selector:.TrailLayout_alerts__wzKO2 button|last}}",
+        "type": "text"
+      },
+      {
+        "id": "1776614028902yugr3azbg",
+        "name": "area",
+        "value": "{{selector:.HeaderMetadata_locationLinkText__lx1Pf}}",
+        "type": "text"
+      },
+      {
+        "id": "17765749553221itrlbr09",
+        "name": "latitude",
+        "value": "{{meta:name:place:location:latitude}}",
+        "type": "number"
+      },
+      {
+        "id": "1776574962954a1eqtbhh6",
+        "name": "longitude",
+        "value": "{{meta:name:place:location:longitude}}",
+        "type": "number"
+      },
+      {
+        "id": "1776574591616lb785jqvj",
+        "name": "rating",
+        "value": "{{selector:.Rating_ratingLink__wPEYB span|first}}",
+        "type": "number"
+      },
+      {
+        "id": "1776574869053f2a9bd2lq",
+        "name": "my rating",
+        "value": "",
+        "type": "number"
+      },
+      {
+        "id": "1776614509192wssj6mae9",
+        "name": "last hiked",
+        "value": "",
+        "type": "date"
+      },
+      {
+        "id": "1776618595107fyi37mn9v",
+        "name": "past hike dates",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "1776879360130rxxicu17g",
+        "name": "strava links",
+        "value": "",
+        "type": "multitext"
+      }
+    ],
+    "noteContentFormat": "# {{title}}\n---\n![1000]({{meta:name:twitter:image}})\n\n## Description\n---\n{{selector:.Description_description__d8JyX}}\n\n\n> [!NOTE]  ## Notes\n> Contents\n",
+    "id": "1776569505813e718quj"
+  },
+  "template_1776723850547ehfmeqs": {
+    "schemaVersion": "0.1.0",
+    "name": "Product",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "05-collections/products",
+    "noteContentFormat": "{{description}}",
+    "properties": [
+      {
+        "id": "1776746945452sxq7vwjsz",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776746952794h1pfsvtlo",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776723850550vhh120w",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776748422706785ysmc9u",
+        "name": "tags",
+        "value": "wishlist",
+        "type": "multitext"
+      },
+      {
+        "id": "1776747276606fgnmbya5y",
+        "name": "brand",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "17767238505508o3hbui",
+        "name": "title",
+        "value": "{{schema:@Product:name}}",
+        "type": "text"
+      },
+      {
+        "id": "17767238505505pshlec",
+        "name": "categories",
+        "value": "[[Products]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1776723850550rgiqqmc",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1776723850550czlmlxk",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1776723850550dsry1y9",
+        "name": "price",
+        "value": "{{meta:property:product:price:amount}}",
+        "type": "number"
+      },
+      {
+        "id": "1776748730876lzwrvpvlx",
+        "name": "currency",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "id": "1776723850550l6yf56w",
+        "name": "image",
+        "value": "{{image}}",
+        "type": "text"
+      },
+      {
+        "id": "1776748815540aa4kxubqy",
+        "name": "size",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "1776748822636e1uymnily",
+        "name": "colour",
+        "value": "",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "schema:@Product"
+    ],
+    "id": "1776723850547ehfmeqs",
+    "context": ""
+  },
+  "template_1776806560273h76db1fui": {
+    "id": "1776806560273h76db1fui",
+    "name": "Podcasts-YouTube (with transcript)",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "03-information-library/podcasts",
+    "noteContentFormat": "> [!info] ## tldw\n> {{\"write a <350 character summary of what the video is about and key insights covered in lowercase\"}}\n\n```table-of-contents\n```\n\n##  Notes\n- .\n\n## Video\n\n{{content}}",
+    "context": "",
+    "properties": [
+      {
+        "id": "1776213415629l006zjy2e",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776214854954ouehrw2px",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "17762148724585bz74xguw",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1750094232403i5vgqu9lm",
+        "name": "tags",
+        "value": "youtube, podcasts, listened, watched",
+        "type": "multitext"
+      },
+      {
+        "id": "17500942324030h7yr2sgd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1750094232403f3yv36x1c",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17500942324030i8ojprl4",
+        "name": "creator",
+        "value": "[[{{schema:@VideoObject:author}}]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1776210119733fif0glopm",
+        "name": "summary",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "1776210023775v6682yx1w",
+        "name": "uploaded",
+        "value": "{{schema:@VideoObject:uploadDate}}",
+        "type": "date"
+      },
+      {
+        "id": "1750094232403q4mg3kz7p",
+        "name": "categories",
+        "value": "[podcasts.base]]",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "https://www.youtube.com"
+    ]
+  },
+  "template_17818005650582stdc0e": {
+    "schemaVersion": "0.1.0",
+    "name": "Google Maps",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "05-collections/places",
+    "noteContentFormat": "> [!NOTE] # Notes\n> ",
+    "properties": [
+      {
+        "id": "1781800565058lgx7yy3",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1781802929070fmeyk50cx",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "17818029550353kitb159z",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1781800565058bk2k5jr",
+        "name": "tags",
+        "value": "to-visit, visited, places",
+        "type": "multitext"
+      },
+      {
+        "id": "1781803122371vslkg5z41",
+        "name": "place name",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1781800565058t042prq",
+        "name": "place type",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "id": "1781809079344gcbj1xmne",
+        "name": "place tags",
+        "value": "Dine-In, Takeout",
+        "type": "multitext"
+      },
+      {
+        "id": "1781800565058utg8rs3",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1781800565058afus68g",
+        "name": "categories",
+        "value": "[[Places]]",
+        "type": "multitext"
+      },
+      {
+        "id": "178180056505826y2tgr",
+        "name": "coordinates",
+        "value": "{{url|split:\\\"/@\\\"|slice:1|split:\\\",\\\"|slice:0,2}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1781800565058vlsyip0",
+        "name": "address",
+        "value": "{{selector:button[aria-label^=\\\"Address:\\\"]:aria-label|split:\\\"Address: \\\"|slice:1}}",
+        "type": "text"
+      },
+      {
+        "id": "1781800565058y8aolj6",
+        "name": "google rating",
+        "value": "{{selector:div[jsaction*=\\\"moreReviews\\\"] .fontDisplayLarge}}",
+        "type": "text"
+      },
+      {
+        "id": "1781800565058n0kqqr6",
+        "name": "description",
+        "value": "{{selector:div[aria-label^=\\\"About \\\"] button .PYvSYb[jslog]}}",
+        "type": "text"
+      },
+      {
+        "id": "17818005650589a2i682",
+        "name": "last visited",
+        "value": "",
+        "type": "checkbox"
+      },
+      {
+        "id": "17818005650589i4a0b6",
+        "name": "my rating",
+        "value": "",
+        "type": "number"
+      }
+    ],
+    "triggers": [
+      "https://www.google.com/maps/place/"
+    ],
+    "id": "17818005650582stdc0e",
+    "context": ""
+  },
+  "template_1781804856387a0zay9j21": {
+    "id": "1781804856387a0zay9j21",
+    "name": "Links",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "03-information-library/links",
+    "noteContentFormat": "",
+    "context": "",
+    "properties": [
+      {
+        "id": "17500942324036bk257ayv",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776214962004bme4q7z52",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776214965092l2k3iatjs",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1750094232403i5vgqu9lm",
+        "name": "tags",
+        "value": "links",
+        "type": "multitext"
+      },
+      {
+        "id": "17500942324030h7yr2sgd",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1750094232403f3yv36x1c",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17500942324030i8ojprl4",
+        "name": "author",
+        "value": "{{author|split:\\\", \\\"|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1750094232403q4mg3kz7p",
+        "name": "published",
+        "value": "{{published}}",
+        "type": "date"
+      },
+      {
+        "id": "1750094232403ed6wdt760",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      }
+    ],
+    "triggers": []
+  },
+  "template_list": [
+    "1781804856387a0zay9j21",
+    "1776569505813e718quj",
+    "1774446127162a59n7qdhj",
+    "17765582996981bvo90i",
+    "1776190378553niqzdev",
+    "17744461087450wmgkpw5b",
+    "1776486272594pwbakuc",
+    "1776488399858dh38e7h5e",
+    "17762724654960lsbsumwr",
+    "177444609379975n8rcee8",
+    "1776806560273h76db1fui",
+    "1776723850547ehfmeqs",
+    "17818005650582stdc0e",
+    "1775171074129jsnlv2y1o",
+    "1750094232403ofvg6hxpp"
+  ],
+  "vaults": []
+}

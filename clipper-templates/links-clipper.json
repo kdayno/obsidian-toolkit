@@ -1,8 +1,8 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Webpages",
+	"name": "Links",
 	"behavior": "create",
-	"noteContentFormat": "{{content}}",
+	"noteContentFormat": "",
 	"properties": [
 		{
 			"name": "created",
@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "webpages",
+			"value": "links",
 			"type": "multitext"
 		},
 		{
@@ -52,5 +52,5 @@
 	],
 	"triggers": [],
 	"noteNameFormat": "{{title}}",
-	"path": "03-information-library/webpages"
+	"path": "03-information-library/links"
 }

@@ -1,8 +1,8 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "YouTube",
+	"name": "Podcasts-YouTube (with transcript)",
 	"behavior": "create",
-	"noteContentFormat": "> [!info] ## tldw\n> {{\"write a <350 character summary of what the video is about and key insights covered in lowercase\"}}\n\n```table-of-contents\n```\n\n# Notes\n- .\n",
+	"noteContentFormat": "> [!info] ## tldw\n> {{\"write a <350 character summary of what the video is about and key insights covered in lowercase\"}}\n\n```table-of-contents\n```\n\n##  Notes\n- .\n\n## Video\n\n{{content}}",
 	"properties": [
 		{
 			"name": "created",
@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "youtube, videos, watched",
+			"value": "youtube, podcasts, listened, watched",
 			"type": "multitext"
 		},
 		{
@@ -51,7 +51,7 @@
 		},
 		{
 			"name": "categories",
-			"value": "[[videos.base]]",
+			"value": "[podcasts.base]]",
 			"type": "multitext"
 		}
 	],
@@ -59,5 +59,5 @@
 		"https://www.youtube.com"
 	],
 	"noteNameFormat": "{{title}}",
-	"path": "03-information-library/videos"
+	"path": "03-information-library/podcasts"
 }

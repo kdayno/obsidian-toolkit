@@ -1,8 +1,8 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Webpages",
+	"name": "Podcasts-YouTube",
 	"behavior": "create",
-	"noteContentFormat": "{{content}}",
+	"noteContentFormat": "> [!info] ## tldw\n> {{\"write a <350 character summary of what the video is about and key insights covered in lowercase\"}}\n\n##  Notes\n- .",
 	"properties": [
 		{
 			"name": "created",
@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "webpages",
+			"value": "youtube, podcasts, listened, watched",
 			"type": "multitext"
 		},
 		{
@@ -52,5 +52,5 @@
 	],
 	"triggers": [],
 	"noteNameFormat": "{{title}}",
-	"path": "03-information-library/webpages"
+	"path": "03-information-library/podcasts"
 }
