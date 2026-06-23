@@ -31,7 +31,7 @@
         "apiKey": "",
         "apiKeyRequired": true,
         "baseUrl": "https://api.openai.com/v1/chat/completions",
-        "id": "",
+        "id": "1776205296733",
         "name": "OpenAI"
       }
     ]
@@ -448,7 +448,7 @@
     "pinPlayer": true
   },
   "stats": {
-    "addToObsidian": 560,
+    "addToObsidian": 571,
     "copyToClipboard": 0,
     "saveFile": 0,
     "share": 0
@@ -1742,6 +1742,99 @@
     ],
     "triggers": []
   },
+  "template_17821867094059ldnxvrc7": {
+    "schemaVersion": "0.1.0",
+    "name": "Product (Food)",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "05-collections/foods",
+    "noteContentFormat": "> [!NOTE] # Review\n> \n\n# Product Info\n---\n{{content}}\n\n",
+    "properties": [
+      {
+        "id": "1776746945452sxq7vwjsz",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776746952794h1pfsvtlo",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776723850550vhh120w",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776748422706785ysmc9u",
+        "name": "tags",
+        "value": "food",
+        "type": "multitext"
+      },
+      {
+        "id": "1776747276606fgnmbya5y",
+        "name": "brand",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "17767238505508o3hbui",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "17767238505505pshlec",
+        "name": "categories",
+        "value": "[[Products]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1776723850550rgiqqmc",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1776723850550czlmlxk",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1776723850550dsry1y9",
+        "name": "price",
+        "value": "{{meta:property:product:price:amount}}",
+        "type": "number"
+      },
+      {
+        "id": "1776748730876lzwrvpvlx",
+        "name": "currency",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "id": "1776723850550l6yf56w",
+        "name": "image",
+        "value": "{{image}}",
+        "type": "text"
+      },
+      {
+        "id": "1776748815540aa4kxubqy",
+        "name": "my rating",
+        "value": "",
+        "type": "number"
+      }
+    ],
+    "triggers": [
+      "https://www.traderjoes.com"
+    ],
+    "id": "17821867094059ldnxvrc7",
+    "context": ""
+  },
   "template_list": [
     "1781804856387a0zay9j21",
     "1776569505813e718quj",
@@ -1755,6 +1848,7 @@
     "177444609379975n8rcee8",
     "1776806560273h76db1fui",
     "1776723850547ehfmeqs",
+    "17821867094059ldnxvrc7",
     "17818005650582stdc0e",
     "1775171074129jsnlv2y1o",
     "1750094232403ofvg6hxpp"
