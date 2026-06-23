@@ -1,0 +1,78 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Product (Food)",
+	"behavior": "create",
+	"noteContentFormat": "> [!NOTE] # Review\n> \n\n# Product Info\n---\n{{content}}\n\n",
+	"properties": [
+		{
+			"name": "created datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "updated datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "food",
+			"type": "multitext"
+		},
+		{
+			"name": "brand",
+			"value": "",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "categories",
+			"value": "[[Products]]",
+			"type": "multitext"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{meta:property:product:price:amount}}",
+			"type": "number"
+		},
+		{
+			"name": "currency",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "my rating",
+			"value": "",
+			"type": "number"
+		}
+	],
+	"triggers": [
+		"https://www.traderjoes.com"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "05-collections/foods"
+}
