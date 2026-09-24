@@ -1,0 +1,19 @@
+/* ---- Small gap between text/heading and list inside callouts ---- */
+
+/* Editing view (Live Preview) */
+.markdown-source-view.mod-cm6 .callout-content > :is(p, h1, h2, h3, h4, h5, h6):has(+ ul, + ol) {
+  margin-block-end: 0;
+}
+.markdown-source-view.mod-cm6 .callout-content > ul,
+.markdown-source-view.mod-cm6 .callout-content > ol {
+  margin-block-start: 0.2em;
+}
+
+/* Reading view */
+.markdown-reading-view .callout-content > :is(p, h1, h2, h3, h4, h5, h6):has(+ ul, + ol) {
+  margin-block-end: 0;
+}
+.markdown-reading-view .callout-content > ul,
+.markdown-reading-view .callout-content > ol {
+  margin-block-start: 0.2em;
+}

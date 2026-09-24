@@ -1,0 +1,23 @@
+/* Outline + background for Bases cards */
+.bases-cards-item {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m);
+  background-color: var(--background-secondary);
+  box-shadow: var(--shadow-s);
+  padding: 4px;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+/* Hover highlight */
+.bases-cards-item:hover {
+  border-color: var(--interactive-accent);
+  box-shadow: var(--shadow-l);
+}
+
+.bases-cards-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 10px;
+  min-height: 76px;
+}

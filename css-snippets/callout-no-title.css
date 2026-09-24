@@ -1,0 +1,24 @@
+/* Usage: > [!note|block]  (or any callout type followed by |block) */
+
+.callout[data-callout-metadata*="block"] {
+  /* even padding on all sides, since there's no title to line up with */
+  padding: var(--size-4-3) var(--size-4-4);
+}
+
+/* remove the title row (icon + title text + fold arrow) */
+.callout[data-callout-metadata*="block"] > .callout-title {
+  display: none;
+}
+
+/* content normally has its own side padding to align under the title; drop it */
+.callout[data-callout-metadata*="block"] > .callout-content {
+  padding: 0;
+}
+
+/* strip the first/last paragraph margins so the space above and below is symmetric */
+.callout[data-callout-metadata*="block"] > .callout-content > :first-child {
+  margin-top: 0;
+}
+.callout[data-callout-metadata*="block"] > .callout-content > :last-child {
+  margin-bottom: 0;
+}
