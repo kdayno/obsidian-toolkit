@@ -1,0 +1,60 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Claude Conversation",
+	"behavior": "create",
+	"noteContentFormat": "## Table of Contents\n```table-of-contents\n```\n\n> *{{description}}*\n\n{% for turn in content|replace:\"/^\\\\*\\\\*You\\\\*\\\\*\\\\n+/\":\"\"|split:\"\\n\\n---\\n\\n\\\\*\\\\*You\\\\*\\\\*\\n\\n\" %}{% set parts = turn|split:\"\\n\\n---\\n\\n\" %}{% set reply = parts|slice:1|join:\"\\n\\n\"|replace:\"/^\\\\*\\\\*Claude\\\\*\\\\*\\\\n+/gm\":\"\"|trim %}## You - Prompt {{ loop.index }}\n{{ parts|first|trim|callout:(\"tip|block\",\"\") }}\n{% if reply %}## Claude - Response {{ loop.index }}\n{{ reply|callout:(\"note|block\",\"\") }}\n{% endif %}{% endfor %}",
+	"properties": [
+		{
+			"name": "created",
+			"value": "{{date}}",
+			"type": "date"
+		},
+		{
+			"name": "created datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "updated datetime",
+			"value": "",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "claude/conversation",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "site",
+			"value": "{{site}}",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "words",
+			"value": "{{words}}",
+			"type": "number"
+		},
+		{
+			"name": "source",
+			"value": "{{url}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://claude.ai/chat/",
+		"https://claude.ai/cowork/",
+		"https://claude.ai/share/"
+	],
+	"noteNameFormat": "{{title|safe_name}}",
+	"path": "03-information-library/claude-conversations"
+}
