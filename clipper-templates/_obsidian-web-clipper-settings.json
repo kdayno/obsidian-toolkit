@@ -428,6 +428,33 @@
     {
       "name": "place tags",
       "type": "multitext"
+    },
+    {
+      "name": "place location",
+      "type": "multitext"
+    },
+    {
+      "defaultValue": "{{meta:name:twitter:text:sqft}}",
+      "name": "sqft",
+      "type": "number"
+    },
+    {
+      "name": "lotsqft",
+      "type": "number"
+    },
+    {
+      "name": "visited",
+      "type": "checkbox"
+    },
+    {
+      "defaultValue": "{{site}}",
+      "name": "site",
+      "type": "text"
+    },
+    {
+      "defaultValue": "{{words}}",
+      "name": "words",
+      "type": "number"
     }
   ],
   "reader_settings": {
@@ -448,9 +475,9 @@
     "pinPlayer": true
   },
   "stats": {
-    "addToObsidian": 560,
-    "copyToClipboard": 0,
-    "saveFile": 0,
+    "addToObsidian": 703,
+    "copyToClipboard": 1,
+    "saveFile": 1,
     "share": 0
   },
   "template_1750094232403ofvg6hxpp": {
@@ -1622,6 +1649,12 @@
         "type": "multitext"
       },
       {
+        "id": "1782536759330nn3b274zg",
+        "name": "place location",
+        "value": "",
+        "type": "multitext"
+      },
+      {
         "id": "1781800565058utg8rs3",
         "name": "url",
         "value": "{{url}}",
@@ -1661,7 +1694,7 @@
         "id": "17818005650589a2i682",
         "name": "last visited",
         "value": "",
-        "type": "checkbox"
+        "type": "date"
       },
       {
         "id": "17818005650589i4a0b6",
@@ -1742,10 +1775,261 @@
     ],
     "triggers": []
   },
+  "template_17821867094059ldnxvrc7": {
+    "schemaVersion": "0.1.0",
+    "name": "Product (Food)",
+    "behavior": "create",
+    "noteNameFormat": "{{title}}",
+    "path": "05-collections/foods",
+    "noteContentFormat": "> [!NOTE] # Review\n> \n\n# Product Info\n---\n{{content}}\n\n",
+    "properties": [
+      {
+        "id": "1776746945452sxq7vwjsz",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776746952794h1pfsvtlo",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1776723850550vhh120w",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1776748422706785ysmc9u",
+        "name": "tags",
+        "value": "food",
+        "type": "multitext"
+      },
+      {
+        "id": "1776747276606fgnmbya5y",
+        "name": "brand",
+        "value": "",
+        "type": "multitext"
+      },
+      {
+        "id": "17767238505508o3hbui",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "17767238505505pshlec",
+        "name": "categories",
+        "value": "[[Products]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1776723850550rgiqqmc",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1776723850550czlmlxk",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "1776723850550dsry1y9",
+        "name": "price",
+        "value": "{{meta:property:product:price:amount}}",
+        "type": "number"
+      },
+      {
+        "id": "1776748730876lzwrvpvlx",
+        "name": "currency",
+        "value": "",
+        "type": "text"
+      },
+      {
+        "id": "1776723850550l6yf56w",
+        "name": "image",
+        "value": "{{image}}",
+        "type": "text"
+      },
+      {
+        "id": "1776748815540aa4kxubqy",
+        "name": "my rating",
+        "value": "",
+        "type": "number"
+      }
+    ],
+    "triggers": [
+      "https://www.traderjoes.com"
+    ],
+    "id": "17821867094059ldnxvrc7",
+    "context": ""
+  },
+  "template_1782628032509ui3zdsj": {
+    "schemaVersion": "0.1.0",
+    "name": "Redfin",
+    "behavior": "create",
+    "noteNameFormat": "{{meta:name:twitter:text:street_address}}, {{meta:name:twitter:text:city}}",
+    "path": "Clippings",
+    "noteContentFormat": "",
+    "properties": [
+      {
+        "id": "17826280325150r3x5t6",
+        "name": "categories",
+        "value": "[[Places]], [[Houses]]",
+        "type": "multitext"
+      },
+      {
+        "id": "1782628032515bad3cuj",
+        "name": "url",
+        "value": "{{url}}",
+        "type": "text"
+      },
+      {
+        "id": "17826280325152excb23",
+        "name": "address",
+        "value": "{{meta:name:twitter:text:street_address}}, {{meta:name:geo.placename}}",
+        "type": "text"
+      },
+      {
+        "id": "1782628032515bp1skka",
+        "name": "loc",
+        "value": "{{meta:name:twitter:text:city|wikilink|join}}",
+        "type": "multitext"
+      },
+      {
+        "id": "1782628032515nqgyvdm",
+        "name": "year",
+        "value": "{{selector:.keyDetails-label:has(.wrench) ~ .keyDetails-value}}",
+        "type": "number"
+      },
+      {
+        "id": "1782628032515oh84doj",
+        "name": "price",
+        "value": "{{meta:name:twitter:text:price}}",
+        "type": "number"
+      },
+      {
+        "id": "1782628032515af3t5du",
+        "name": "sqft",
+        "value": "{{meta:name:twitter:text:sqft}}",
+        "type": "number"
+      },
+      {
+        "id": "1782628032515tj523oq",
+        "name": "lotsqft",
+        "value": "",
+        "type": "number"
+      },
+      {
+        "id": "1782628032515v5pxrni",
+        "name": "coordinates",
+        "value": "\\\"{{schema:[1].geo.latitude}}\\\",\\\"{{schema:[1].geo.longitude}}\\\"",
+        "type": "multitext"
+      },
+      {
+        "id": "1782628032515x3l3ng3",
+        "name": "visited",
+        "value": "",
+        "type": "checkbox"
+      },
+      {
+        "id": "1782628032515e4bieai",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1782628032515qlr589g",
+        "name": "tags",
+        "value": "places, homes",
+        "type": "multitext"
+      }
+    ],
+    "triggers": [
+      "https://www.redfin.com/"
+    ],
+    "id": "1782628032509ui3zdsj"
+  },
+  "template_1790291565085v3qydnf": {
+    "schemaVersion": "0.1.0",
+    "name": "Claude Conversation",
+    "behavior": "create",
+    "noteNameFormat": "{{title|safe_name}}",
+    "path": "03-information-library/claude-conversations",
+    "noteContentFormat": "## Table of Contents\n```table-of-contents\n```\n\n> *{{description}}*\n\n{% for turn in content|replace:\"/^\\\\*\\\\*You\\\\*\\\\*\\\\n+/\":\"\"|split:\"\\n\\n---\\n\\n\\\\*\\\\*You\\\\*\\\\*\\n\\n\" %}{% set parts = turn|split:\"\\n\\n---\\n\\n\" %}{% set reply = parts|slice:1|join:\"\\n\\n\"|replace:\"/^\\\\*\\\\*Claude\\\\*\\\\*\\\\n+/gm\":\"\"|trim %}## You - Prompt {{ loop.index }}\n{{ parts|first|trim|callout:(\"tip|block\",\"\") }}\n{% if reply %}## Claude - Response {{ loop.index }}\n{{ reply|callout:(\"note|block\",\"\") }}\n{% endif %}{% endfor %}",
+    "properties": [
+      {
+        "id": "1790291565086i35arm3",
+        "name": "created",
+        "value": "{{date}}",
+        "type": "date"
+      },
+      {
+        "id": "1790291646060bj5sspxvz",
+        "name": "created datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1790291650026ssl9sy0jg",
+        "name": "updated datetime",
+        "value": "",
+        "type": "datetime"
+      },
+      {
+        "id": "1790291565086ldgmraa",
+        "name": "tags",
+        "value": "claude/conversation",
+        "type": "multitext"
+      },
+      {
+        "id": "17902915650865k7iqi2",
+        "name": "title",
+        "value": "{{title}}",
+        "type": "text"
+      },
+      {
+        "id": "1790291565086dn1mu1k",
+        "name": "site",
+        "value": "{{site}}",
+        "type": "text"
+      },
+      {
+        "id": "1790291565086ghmfy7j",
+        "name": "description",
+        "value": "{{description}}",
+        "type": "text"
+      },
+      {
+        "id": "1790291565086vkgq0b5",
+        "name": "words",
+        "value": "{{words}}",
+        "type": "number"
+      },
+      {
+        "id": "1790291565086suwck9l",
+        "name": "source",
+        "value": "{{url}}",
+        "type": "text"
+      }
+    ],
+    "triggers": [
+      "https://claude.ai/chat/",
+      "https://claude.ai/cowork/",
+      "https://claude.ai/share/"
+    ],
+    "id": "1790291565085v3qydnf",
+    "context": ""
+  },
   "template_list": [
     "1781804856387a0zay9j21",
     "1776569505813e718quj",
     "1774446127162a59n7qdhj",
+    "1790291565085v3qydnf",
     "17765582996981bvo90i",
     "1776190378553niqzdev",
     "17744461087450wmgkpw5b",
@@ -1755,8 +2039,10 @@
     "177444609379975n8rcee8",
     "1776806560273h76db1fui",
     "1776723850547ehfmeqs",
+    "17821867094059ldnxvrc7",
     "17818005650582stdc0e",
     "1775171074129jsnlv2y1o",
+    "1782628032509ui3zdsj",
     "1750094232403ofvg6hxpp"
   ],
   "vaults": []
